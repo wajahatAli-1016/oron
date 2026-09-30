@@ -1,0 +1,102 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --color-background: #f5f5f5;
+  --color-text: #000000;
+  --color-placeholder: #00000080;
+  --color-card: #ffffff;
+  --color-primary: #3558be;
+  --color-primary-transparent: #3557be3a;
+  --color-secondary: #ff9900;
+  --color-border: #d0d5dd;
+  --color-error: #ff3b30;
+  --color-info: #007aff;
+  --color-warning: #ffc107;
+  --color-success: #28a745;
+
+  --glass-bg: #ffffffcc;
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-sheen-start: rgba(0, 0, 0, 0.08);
+  --glass-sheen-end: rgba(0, 0, 0, 0);
+  --glass-glow-start: #3558be20;
+  --glass-glow-end: transparent;
+  --glass-bottomline-mid: #3558be40;
+
+  --gradient-primarybutton-1: #002c65;
+  --gradient-primarybutton-2: #1b79b6;
+  --gradient-primarybutton-3: #4cbeff;
+}
+
+.dark {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-placeholder: #ffffff80;
+  --color-card: #1e2939;
+  --color-primary: #3558be;
+  --color-primary-transparent: #3557be3a;
+  --color-secondary: #ff9900;
+  --color-border: #475467;
+  --color-error: #ff453a;
+  --color-info: #0a84ff;
+  --color-warning: #ffd60a;
+  --color-success: #32d74b;
+
+  --glass-bg: #1e2939e8;
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-sheen-start: rgba(255, 255, 255, 0.12);
+  --glass-sheen-end: rgba(255, 255, 255, 0);
+  --glass-glow-start: #3558be40;
+  --glass-glow-end: transparent;
+  --glass-bottomline-mid: #3558be70;
+
+  --gradient-primarybutton-1: #4cbeff;
+  --gradient-primarybutton-2: #1b79b6;
+  --gradient-primarybutton-3: #002c65;
+}
+
+@layer base {
+  body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+      Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+@media print {
+  aside, header, nav, .no-print {
+    display: none !important;
+  }
+  main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background-color: white !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
